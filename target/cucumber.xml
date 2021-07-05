@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="35.445">
+<testcase classname="Busca no Blog" name="Procurar por um texto na pagina do Blog da SOC" time="19.145">
+<system-out><![CDATA[Dado que estou na na pagina do Blog da SOC..................................passed
+E tenho um campo de busca...................................................passed
+Quando eu procuro pelo texto "SOC realiza treinamento interno para lideranças".passed
+E clico no botao pesquisar..................................................passed
+Entao e exibido o conteudo da minha busca...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Buscar credenciado" name="Visualizar prestadores na rede credenciada da SOC" time="15.719">
+<system-out><![CDATA[Dado que estou na na pagina principal da SOC................................passed
+E clico no link da SOCNET...................................................passed
+E sou redirecionado para a pagina da SOCNET.................................passed
+E clico no link Buscar credenciados.........................................passed
+Quando eu digito um CEP valido..............................................passed
+E clico no botao Pesquisar..................................................passed
+Entao e exibido o conteudo da minha busca dos prestadores credenciados......passed
+]]></system-out>
+</testcase>
+</testsuite>
