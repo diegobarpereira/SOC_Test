@@ -1,7 +1,6 @@
 package core;
 
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -11,15 +10,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class Hooks extends DriverFactory {
-    String scenarioName = null;
 
     public Hooks() {
         super();
-    }
-
-    @Before
-    public void setUp(Scenario scenario){
-        scenarioName = scenario.getName();
     }
 
     @After
@@ -27,11 +20,10 @@ public class Hooks extends DriverFactory {
 
         TakesScreenshot ss = (TakesScreenshot) getDriver();
         File arquivo = ss.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" + File.separator + scenarioName + ".jpg"));
+        FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" + File.separator + scenario.getName() + ".jpg"));
 
         byte[] ssReport = ss.getScreenshotAs(OutputType.BYTES);
-        scenario.attach(ssReport, "image/png", scenarioName);
-
+        scenario.attach(ssReport, "image/png", "img");
 
         if (Propriedades.FECHAR_BROWSER) {
             killDriver();

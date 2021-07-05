@@ -11,9 +11,7 @@ public class BlogPage {
     WebElement procurar;
 
     public void acessarBlogSOC() {
-
         getDriver().get("https://ww2.soc.com.br/blog/");
-
     }
 
     public void encontrarCampoDeBusca() {
