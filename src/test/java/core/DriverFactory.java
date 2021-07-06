@@ -20,7 +20,7 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            switch (Propriedades.browser) {
+            switch (Properties.browser) {
                 case FIREFOX: driver = new FirefoxDriver(); break;
                 case CHROME: driver = new ChromeDriver(); break;
             }

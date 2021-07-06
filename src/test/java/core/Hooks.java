@@ -20,12 +20,13 @@ public class Hooks extends DriverFactory {
 
         TakesScreenshot ss = (TakesScreenshot) getDriver();
         File arquivo = ss.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" + File.separator + scenario.getName() + ".jpg"));
+        //FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" + File.separator + scenario.getName() + ".jpg"));
+        FileUtils.copyFile(arquivo, new File("test-output" + File.separator + "screenshot" + File.separator + scenario.getName() + ".jpg"));
 
         byte[] ssReport = ss.getScreenshotAs(OutputType.BYTES);
         scenario.attach(ssReport, "image/png", "img");
 
-        if (Propriedades.FECHAR_BROWSER) {
+        if (Properties.FECHAR_BROWSER) {
             killDriver();
         }
     }
