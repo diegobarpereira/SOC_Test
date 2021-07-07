@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import static core.DriverFactory.getDriver;
 
 public class RedeCredPage {
-    public void inserirCEPValido() {
-        getDriver().findElement(By.id("ipt-busca-credenciado-2")).sendKeys("11015-012");
+    public void inserirCEPValido(String cep) {
+        getDriver().findElement(By.id("ipt-busca-credenciado-2")).sendKeys(cep);
     }
 
     public void clicarNoBotaoPesquisar() {

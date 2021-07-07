@@ -7,6 +7,6 @@ Funcionalidade: Buscar credenciado
     E clico no link da SOCNET
     E sou redirecionado para a pagina da SOCNET
     E clico no link Buscar credenciados
-    Quando eu digito um CEP valido
+    Quando eu digito o CEP "11015-012"
     E clico no botao Pesquisar
     Entao e exibido o conteudo da minha busca dos prestadores credenciados

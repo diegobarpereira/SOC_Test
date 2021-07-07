@@ -1,6 +1,5 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import static core.DriverFactory.getDriver;
@@ -12,11 +11,11 @@ public class HomePage {
     }
 
     public void clicarEmAceitarCookies() {
-        getDriver().findElement(By.xpath("/html/body/div[3]/div/section[3]/div/div/div[2]/div/div/div/div/div/a/span/span")).click();
+        getDriver().findElement(By.xpath("//span[@class='elementor-button-text']//parent::span[1]//*[text()='Aceitar cookies']")).click();
     }
 
     public void clicarNoLinkSocNet() {
-        getDriver().findElement(By.xpath("/html/body/div[2]/div/div/section[2]/div/div/div/div/div/section/div/div/div/div/div/div/div/section/div/div[2]/div/div/div[3]/div/div")).click();
+        getDriver().findElement(By.xpath("(//a[@class='access-details'])[3]")).click();
     }
 
 

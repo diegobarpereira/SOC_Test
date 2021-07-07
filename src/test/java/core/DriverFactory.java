@@ -24,7 +24,7 @@ public class DriverFactory {
                 case FIREFOX: driver = new FirefoxDriver(); break;
                 case CHROME: driver = new ChromeDriver(); break;
             }
-            driver.manage().window().setSize(new Dimension(1200, 765));
+            driver.manage().window().setSize(new Dimension(1366, 768));
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         return driver;

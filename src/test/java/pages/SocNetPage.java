@@ -7,12 +7,12 @@ import static core.DriverFactory.getDriver;
 
 public class SocNetPage {
     public void verificarTextoPaginaSocNet() {
-        String textoProcurado = getDriver().findElement(By.xpath("//h2")).getText();
+        String textoProcurado = getDriver().findElement(By.xpath("(//h2[@class='elementor-heading-title elementor-size-default'])[1]")).getText();
         Assert.assertEquals("Rede Credenciada SOCNET:\n" +
                 "a maior rede colaborativa de Serviços Ocupacionais do Brasil.", textoProcurado);
     }
 
     public void clicarNoLinkBuscarCredenciados() {
-        getDriver().findElement(By.xpath("/html/body/div[2]/div/div/section[1]/div/div/div/div/div/section/div/div/div/div/div/div[4]/div/div/a/span/span")).click();
+        getDriver().findElement(By.xpath("//span[@class='elementor-button-text']//parent::span[1]//*[text()='Buscar credenciados']")).click();
     }
 }

@@ -33,9 +33,9 @@ public class HomeSteps {
         socNetPage.clicarNoLinkBuscarCredenciados();
     }
 
-    @Quando("eu digito um CEP valido")
-    public void euDigitoUmCEPValido() {
-        redeCredPage.inserirCEPValido();
+    @Quando("eu digito o CEP {string}")
+    public void euDigitoOCEP(String cep) {
+        redeCredPage.inserirCEPValido(cep);
     }
 
     @Quando("clico no botao Pesquisar")
