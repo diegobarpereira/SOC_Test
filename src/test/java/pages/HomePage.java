@@ -18,8 +18,4 @@ public class HomePage {
         getDriver().findElement(By.xpath("(//a[@class='access-details'])[3]")).click();
     }
 
-
-
-
-
 }

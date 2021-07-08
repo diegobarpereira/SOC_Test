@@ -1,6 +1,5 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -15,7 +14,6 @@ public class BlogPage {
     }
 
     public void encontrarCampoDeBusca() {
-        //procurar = getDriver().findElement(By.xpath("//div[2]/div/div/div/div/form/div/input"));
         procurar = getDriver().findElement(By.xpath("(//input[@placeholder='Procurar'])[3]"));
         procurar.click();
     }
@@ -27,12 +25,5 @@ public class BlogPage {
     public void clicarNoBotaoPesquisar() {
         getDriver().findElement(By.xpath("//button[@title='Search']")).click();
     }
-
-    public void verificarTextoProcurado() {
-        String textoProcurado = getDriver().findElement(By.xpath("(//h2[@class='elementor-heading-title elementor-size-default'])[1]")).getText();
-        Assert.assertEquals("Search Results for: SOC realiza treinamento interno para lideranças", textoProcurado);
-
-    }
-
 
 }

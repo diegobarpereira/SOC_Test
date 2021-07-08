@@ -25,7 +25,7 @@ public class DriverFactory {
                 case CHROME: driver = new ChromeDriver(); break;
             }
             driver.manage().window().setSize(new Dimension(1366, 768));
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         }
         return driver;
     }
