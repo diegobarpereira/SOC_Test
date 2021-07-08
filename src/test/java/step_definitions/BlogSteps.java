@@ -10,7 +10,7 @@ public class BlogSteps {
     BlogPage blogPage = new BlogPage();
     BlogResultPage blogResultPage = new BlogResultPage();
 
-    @Dado("que estou na na pagina do Blog da SOC")
+    @Dado("que estou na pagina do Blog da SOC")
     public void que_estou_na_na_pagina_do_blog_da_soc() {
         blogPage.acessarBlogSOC();
     }
